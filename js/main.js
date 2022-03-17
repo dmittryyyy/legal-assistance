@@ -1,5 +1,17 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+    const textFooterLink = document.querySelectorAll('.footer__link');
+
+    function clearInnerHTML() {
+        if (document.documentElement.clientWidth < 768) {
+            textFooterLink.forEach(item => {
+                item.innerHTML = '';
+            });
+        }
+    }
+    clearInnerHTML();
+
+
     // modal
     const modalBtn = document.querySelectorAll('.button__request-call'),
         modalForm = document.querySelector('form'),
@@ -118,5 +130,6 @@ window.addEventListener('DOMContentLoaded', () => {
     function nameTest(input) {
         return !/^[a-zA-Zа-яА-ЯёЁ'][a-zA-Z-а-яА-ЯёЁ' ]+[a-zA-Zа-яА-ЯёЁ']?$/.test(input.value);
     }
+
 
 });

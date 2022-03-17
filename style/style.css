@@ -122,6 +122,34 @@ footer {
     background-color: #6d5000;
 }
 
+@media (max-width: 1200px) {
+    .main__title {
+        font-size: 35px;
+    }
+    .main__text {
+        font-size: 20px;
+        line-height: 130%
+    }
+    .button__request-call {
+        padding: 8px 8px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .main__title {
+        font-size: 30px;
+    }
+    .main__text {
+        font-size: 15px;
+        line-height: 120%
+    }
+    .button__request-call {
+        padding: 8px 8px;
+        font-size: 10px;
+    }
+}
+
 /* ========================================================================
 HEADER */
 
@@ -190,6 +218,67 @@ HEADER */
     color: #beae74;
     font-size: 20px;
 }
+@media(max-width: 1200.98px) {
+    .nav__item {
+        margin-right: 20px;
+    }
+    .header__number {
+        font-size: 15px;
+    }
+    .header__link {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 991.98px) {
+    .nav__item {
+        margin-right: 15px;
+    }
+    .header__number img {
+        width: 20px;
+    }
+    .header__link {
+        font-size: 12px;
+    }
+    .header__logo img {
+        width: 40px;
+    }
+    .header__title {
+        font-size: 20px;
+    }
+    .nav__button {
+        font-size: 8px;
+    }
+}
+@media(max-width: 768.98px) {
+    .header__container {
+        flex-direction: column;
+    }
+    .header__title {
+        font-size: 20px;
+    }
+    .header__logo img {
+        width: 40px;
+    }
+    .nav__item {
+        margin-right: 15px;
+        margin: 20px 0px 20px 10px;
+    }
+    .header__link {
+        font-size: 12px;
+    }
+    .nav__button {
+        font-size: 8px;
+    }
+}
+@media (max-width: 375.98px) {
+    .header__title {
+        font-size:15px;
+    }
+    .header__logo img {
+        width: 30px;
+    }
+}
 
 /* ========================================================================
 MAIN */
@@ -219,12 +308,16 @@ MAIN */
 .main__tab {
     max-width: 450px;
     text-align: center;
-    max-height: 500px;
+    background-color: rgb(148, 144, 144);
+    border-radius: 15px;
+    border: 3px solid #beae74;
+    margin: 0px 10px 20px 10px;
+    box-shadow: 0 0 15px #beae74;
 }
 
 .tab__img {
+    padding: 10px 10px;
     margin-bottom: 20px;
-    width: 420px;
 }
 
 .tab__title {
@@ -235,63 +328,158 @@ MAIN */
 
 .tab__text {
     color: #fff;
+    padding: 10px 10px;
+}
+
+@media(max-width: 1200.98px) {
+    .main__tab {
+        width: 320px;
+    }
+}
+
+@media(max-width: 991.98px) {
+    .main__tab {
+        width: 240px;
+    }
+    .tab__img {
+        margin-bottom: 10px; 
+    }
+    .tab__title {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 768.98px) {
+    .main__tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main__tab {
+        max-width: 220px;
+    }
+    .tab__img {
+        margin-bottom: 0; 
+    }
+    .tab__title {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .tab__text {
+        font-size: 10px;
+    }
+}
+@media(max-width: 425.98px) {
+    .main__services {
+        padding-top: 170px;
+    }
+    .main__tab {
+        max-width: 250px;
+        margin: 2px;
+    }
+    .tab__img {
+        max-width: 220px; 
+    }
+    .tab__title {
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
 }
 
 /* INFO */
 
 .main__info {
-    background-color: #fafbfd;
+    background-image: url('../images/main/main_info/main_info.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
 }
 
 .info__title {
     margin-bottom: 40px;
+    color: #fff;
+    padding: 20px 0px;
 }
 
-.info__content {
+.text__block {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-.info__content li {
-    list-style: '-' inside;
+    justify-content: center;
+    color: #fff;
+    padding-bottom: 40px;
 }
 
-.info__text {
-    text-align: left;
-    margin: 0px 0px 30px 110px;
-}
-
-.text__content {
-    display: grid;
-    align-content: space-between;
+.info__text-block_1, .info__text-block_2 {
+    max-width: 420px;
+    background-color: rgb(31, 29, 29);
+    border-radius: 15px;
+    border: 5px solid #beae74;
+    margin: 0px 20px;
 }
 
 .text__content-subtitle {
-    margin-bottom: 10px;
     font-size: 30px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
 }
 
 .info__item {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.info-ico {
+    width: 40px;
 }
 
-.info__contacts {
-    margin-top: 20px;
-    align-items: center;
+.botom__text-block {
+    background-color: #111111;
+    width: 100%;
 }
 
-.button__info {
-    background-color: #fff;
-    border: 2px solid #beae74;
-    color: #000;
+.info__sub-text {
+    text-align: center;
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    line-height: 140%;
+    letter-spacing: 2px;
 }
 
-.button__info:hover {
-    background-color: #beae74;
+@media(max-width: 991.98px) {
+    .info__title {
+        margin-bottom: 20px;
+    }
+    .info__text-block_1, .info__text-block_2 {
+        max-width: 320px;
+        margin: 0px 10px;
+    }
 }
-
-
+@media(max-width: 768.98px) {
+    .info__title {
+        margin-bottom: 10px;
+    }
+    .info__text-block_1, .info__text-block_2 {
+        max-width: 280px;
+    }
+    .text__content-subtitle {
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding: 0px 10px;
+    }
+    .info-ico {
+        width: 30px;
+    }
+}
+@media (max-width: 650.98px) {
+    .info__title {
+        margin-bottom: 0;
+    }
+    .text__block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info__text-block_1, .info__text-block_2 {
+        max-width: 280px;
+        margin-bottom: 5px;
+    }
+}
 /* ABOUT */
 
 .main__about {
@@ -321,6 +509,15 @@ MAIN */
     margin: 30px 0px 30px 0px;
     font-size: 40px;
     border-radius: 30px;
+}
+
+.text__button-about {
+    font-weight: bold;
+}
+@media(max-width: 425.98px) {
+    .button__about {
+        font-size: 30px;
+    }
 }
 
 /* ========================================================================
@@ -472,7 +669,7 @@ form {
 /* ========================================================================
 FOOTER */
 .footer {
-    background-color: #111111;
+    background-color: #000;
     width: 100%;
     margin: 0 auto;
 }
@@ -511,4 +708,23 @@ FOOTER */
 }
 .button__footer:hover {
     background-color: #beae74;
+}
+
+
+@media(max-width: 1200.98px) {
+    .contact__item {
+        margin-right: 20px;
+    }
+}
+@media(max-width: 991.98px) {
+    .contact__item {
+        margin-right: 10px;
+        font-size: 10px;
+    }
+}
+@media(max-width: 768.98px) {
+    
+}
+@media (max-width: 650.98px) {
+
 }
