@@ -62,6 +62,7 @@ body {
 main {
     flex: 1 1 auto;
 }
+
 @media (max-width: 1087px) {
     .__container {
         max-width: 970px;
@@ -325,7 +326,7 @@ MAIN */
 /* ========================================================================
 MODAL */
 
-.modal {
+form {
     position: fixed;
     top: 0;
     left: 0;
@@ -376,8 +377,28 @@ MODAL */
     margin-bottom: 20px;
 }
 
-.modal__input input {
+.input__item {
     width: 320px;
+    min-height: 40px;
+    border: 1px solid #A2A2A2;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 114%;
+    padding-left: 10px;
+}
+
+.input__item:focus {
+    box-shadow: 0 0 15px #7f956b;
+}
+
+.input__item.error {
+    box-shadow: 0 0 15px red;
+}
+
+.input__tel {
+    width: 100%;
     min-height: 40px;
     border: 1px solid #A2A2A2;
     box-sizing: border-box;
@@ -399,18 +420,28 @@ MODAL */
     resize: none;
 }
 
-.modal__policy {
+.user-message {
     margin-bottom: 15px;
+    color: red;
+}
+.user-message.success {
+    color: #000;
+}
+
+.modal__policy {
     font-size: 16px;
     display: flex;
-    width: 100%;
     margin: 0px 0px 40px 2px;
 }
 
-.modal__policy input {
+.modal__checkbox {
     margin-right: 5px;
     width: 20px;
     height: 15px;
+}
+
+.modal__checkbox.error {
+    box-shadow: 0 0 15px red;
 }
 
 .modal__link {
