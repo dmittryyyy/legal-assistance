@@ -1,15 +1,26 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-    const textFooterLink = document.querySelectorAll('.footer__link');
+    //footerLinks
+    const textFooterLinks = document.querySelector('.contact__items'),
+        iconFooterLinks = document.querySelector('.contact__items-icon');
 
-    function clearInnerHTML() {
+
+    function showIconFooterLinks() {
         if (document.documentElement.clientWidth < 768) {
-            textFooterLink.forEach(item => {
-                item.innerHTML = '';
-            });
+            textFooterLinks.style.display = 'none';
+            iconFooterLinks.style.display = 'flex';
         }
     }
-    clearInnerHTML();
+
+    function showTextFooterLinks() {
+        if (document.documentElement.clientWidth > 768) {
+            textFooterLinks.style.display = 'flex';
+            iconFooterLinks.style.display = 'none';
+        }
+    }
+    showIconFooterLinks();
+    showTextFooterLinks();
+    
 
 
     // modal
