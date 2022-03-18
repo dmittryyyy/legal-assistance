@@ -180,7 +180,8 @@ HEADER */
 }
 
 .header__nav {
-    
+    animation-duration: 2s;
+    animation-name: nav;
 }
 
 .nav__items {
@@ -304,6 +305,24 @@ MAIN */
     display: flex;
     justify-content: space-between;
 }
+
+
+.main__tabs {
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 .main__tab {
     max-width: 450px;
@@ -542,7 +561,21 @@ form {
     z-index: 100;
     padding: 20px 0;
     display: none;
+    animation-duration: 1s;
+    animation-name: form;
 }
+
+@keyframes form {
+    from {
+      top: 100%;
+      width: 100%;
+    }
+  
+    to {
+      top: 0%;
+      width: 100%;
+    }
+  }
 
 .active {
     display: flex;
@@ -693,6 +726,13 @@ form {
     }
     .modal__message {
         font-size: 15px;
+    }
+    .input__item.error {
+        border: 2px solid red;
+    }
+    .modal__checkbox.error::before {
+        content: "___";
+        color: red;
     }
 }
 @media (max-width: 580.98px) {

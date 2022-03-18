@@ -38,7 +38,7 @@
         <main class="main">
             <section class="main__services">
                 <div class="services__container">
-                    <div class="main__tabs">
+                    <div class="main__tabs" name="slidein">
                         <div class="main__tab">
                             <img src="images/main/tab_img1.jpg" alt="Картинка" class="tab__img">
                             <h2 class="main__title tab__title">Помощь с банкротством</h2>
@@ -111,7 +111,7 @@
                                 <img class="info-ico" src="images/main/main_info/info_business.svg" alt="Иконка">
                                 <li class="info__item">Помогаем в ведении бизнеса</li>
                                 <img class="info-ico" src="images/main/main_info/info_company.svg" alt="Иконка">
-                                <li class="info__item">Отстаивании законных интересов компании в судах всех инстанций
+                                <li class="info__item">Отстаиваем законные интересоы компании в судах всех инстанций
                                 </li>
                                 <img class="info-ico" src="images/main/main_info/Info_negotiation.svg" alt="Иконка">
                                 <li class="info__item">Проведение переговоров, разработка договоров и осуществление их
@@ -134,7 +134,7 @@
 
         </main>
 
-        <form action="send.php" method="POST" class="form__body">
+        <form action="send.php" method="POST" class="form__body" name="form">
             <div class="modal__inner">
                 <span class="close__modal">X</span>
                 <div class="modal__inner-header">
@@ -143,10 +143,10 @@
                 <div class="modal__inner-items">
                     <div class="modal__item">
                         <div class="modal__input">
-                            <input class="input__item name _req" type="name" name="name" placeholder="Имя">
+                            <input class="input__item name _req" type="name" name="name" placeholder="Имя(обязательно)">
                         </div>
                         <div class="modal__input">
-                            <input class="input__item email _req" type="email" name="email" placeholder="E-mail">
+                            <input class="input__item email _req" type="email" name="email" placeholder="E-mail(обязательно)">
                         </div>
                     </div>
                     <div class="modal__item">
