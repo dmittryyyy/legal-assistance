@@ -1,12 +1,12 @@
 window.addEventListener('DOMContentLoaded', () => {
 
     //footerLinks
-    const textFooterLinks = document.querySelector('.contact__items'),
-        iconFooterLinks = document.querySelector('.contact__items-icon');
+    const textFooterLinks = document.querySelector('.footer__contacts'),
+        iconFooterLinks = document.querySelector('.contacts__icon');
 
 
     function showIconFooterLinks() {
-        if (document.documentElement.clientWidth < 768) {
+        if (document.documentElement.clientWidth < 769) {
             textFooterLinks.style.display = 'none';
             iconFooterLinks.style.display = 'flex';
         }
