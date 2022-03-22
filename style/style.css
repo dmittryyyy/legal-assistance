@@ -269,12 +269,12 @@ HEADER */
         font-size: 15px;
     }
     .nav__button {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 @media (max-width: 425.98px) {
     .header__title {
-        font-size: 15px;
+        font-size: 25px;
     }
     .header__logo img {
         width: 30px;
@@ -288,7 +288,7 @@ HEADER */
 }
 @media (max-width: 375.98px) {
     .header__title {
-        font-size: 20px;
+        font-size: 25px;
     }
     .header__logo img {
         width: 30px;
@@ -307,6 +307,11 @@ HEADER */
     .nav__button {
         font-size: 20px;
         margin-bottom: 10px;
+    }
+}
+@media (max-width: 320.98px) {
+    .header__title {
+        font-size: 20px;
     }
 }
 
@@ -410,17 +415,24 @@ MAIN */
         margin-bottom: 0; 
     }
     .tab__title {
-        font-size: 12px;
+        font-size: 16px;
         margin-bottom: 0;
     }
     .tab__text {
-        font-size: 10px;
+        font-size: 15px;
     }
 }
 
 @media(max-width: 375.98px) {
     .main__tabs {
         margin-top: 50px;
+    }
+    .tab__title {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .tab__text {
+        font-size: 15px;
     }
     
 }
@@ -522,13 +534,12 @@ MAIN */
 }
 /* ABOUT */
 main {
-    background-image: url('../images/main/about_bg.jpg');
 }
 
 .main__about {
+    background-image: url('../images/main/about_bg.jpg');
     text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #beae74;
+    border-bottom: 5px solid #beae74;
     border-top: 5px solid #beae74;
 }
 
@@ -558,6 +569,7 @@ main {
 
 .text__button-about {
     font-weight: bold;
+    margin-bottom: 20px;
 }
 @media(max-width: 425.98px) {
     .button__about {

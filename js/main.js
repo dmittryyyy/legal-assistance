@@ -11,16 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
             iconFooterLinks.style.display = 'flex';
         }
     }
-
-    function showTextFooterLinks() {
-        if (document.documentElement.clientWidth > 768) {
-            textFooterLinks.style.display = 'flex';
-            iconFooterLinks.style.display = 'none';
-        }
-    }
     showIconFooterLinks();
-    showTextFooterLinks();
-    
+
 
 
     // modal
@@ -55,11 +47,11 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    //VALIDATION FORM
+    //FORM
+    const form = document.getElementById('form');
+    userMessage = document.querySelector('.user-message');
+    form.addEventListener('submit', formSend);
 
-    const form = document.querySelector('form');
-        form.addEventListener('submit', formSend),
-        userMessage = document.querySelector('.user-message');
 
     const message = {
         validationError: 'Заполните обязательные поля',
@@ -72,17 +64,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
         let error = formValidate(form);
 
-        let formData = new FormData(form);
-
+        const formData = new FormData(form);
 
         if (error === 0) {
-            let response = await fetch('sendmail.php', {
-                method: 'POST',
+            let response = await fetch('send.php', {
+                method: 'post',
                 body: formData
             });
             if (response.ok) {
-                let result = await response.json();
-                userMessage.classList.add('success');
+                let json = await response.text();
                 userMessage.innerHTML = message.success;
                 form.reset();
             } else {
@@ -93,6 +83,10 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    //VALIDATION FORM
+    jQuery(document).ready(function () {
+        $(".input__tel").mask("+7 (999) 999-99-99");
+    });
 
     function formValidate(form) {
         let error = 0;
@@ -102,12 +96,12 @@ window.addEventListener('DOMContentLoaded', () => {
             const input = formReq[i];
             formRemoveError(input);
 
-            if (input.classList.contains('.email')) {
+            if (input.classList.contains('email')) {
                 if (emailTest(input)) {
                     formAddError(input);
                     error++;
                 }
-            } else if (input.classList.contains('.name')) {
+            } else if (input.classList.contains('name')) {
                 if (nameTest(input)) {
                     formAddError(input);
                     error++;
