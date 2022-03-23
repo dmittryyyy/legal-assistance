@@ -51,7 +51,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const message = {
         validationError: 'Заполните обязательные поля',
         success: 'Спасибо, скоро c вами свяжутся!',
-        failure: 'Похоже возникли неполадки, попробуйте позже'
+        failure: 'Похоже возникли неполадки, попробуйте позже',
+        loading: './images/spinner.svg'
     };
 
     async function formSend(e) {
@@ -60,20 +61,29 @@ window.addEventListener('DOMContentLoaded', () => {
         let error = formValidate(form);
 
         const formData = new FormData(form);
+        
+        let statusMessage = document.createElement('img');
+        statusMessage.src = message.loading;
 
         if (error === 0) {
+            userMessage.innerHTML = '';
+            userMessage.insertAdjacentElement('afterend', statusMessage);
             let response = await fetch('send.php', {
                 method: 'post',
                 body: formData
             });
             if (response.ok) {
+                statusMessage.parentNode.removeChild(statusMessage);
                 let json = await response.text();
+                userMessage.classList.add('success');
                 userMessage.innerHTML = message.success;
                 form.reset();
             } else {
+                userMessage.classList.remove('success');
                 userMessage.innerHTML = message.failure;
             }
         } else {
+            userMessage.classList.remove('success');
             userMessage.innerHTML = message.validationError;
         }
     }
