@@ -35,13 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
         body.style.overflow = 'overlay';
     }
 
-    closeBtn.addEventListener('click', () => {
-        closeModal();
-    });
-
     modalForm.addEventListener('click', (e) => {
-        const modal = e.target.closest('.modal__inner');
-        if (!modal) {
+        if(e.target === modalForm || e.target === closeBtn) {
             closeModal();
         }
     });
